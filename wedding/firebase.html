@@ -1,0 +1,50 @@
+<body>
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+      
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+      
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+      <body>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAdeshXg45Wu6z33DU73UP6qptF5xXNArY",
+    authDomain: "wedding-98e1a.firebaseapp.com",
+    databaseURL: "https://wedding-98e1a.firebaseio.com",
+    projectId: "wedding-98e1a",
+    storageBucket: "wedding-98e1a.appspot.com",
+    messagingSenderId: "1088267747105",
+    appId: "1:1088267747105:web:1209260ae981b6e5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // Get a reference to the database service
+  console.log(`firebase`, firebase);
+  
+var database = firebase.database();
+var ref = database.ref("rsvps");
+// var ref = new Firebase(firebaseConfig.databaseURL);
+
+
+// var rsvpRef = database.ref("rsvps");
+ref.set({
+    date_of_birth: "June 23, 1912",
+    full_name: "Alan Turing"
+  }
+);
+function writeUserData(userId, name, email, imageUrl) {
+  firebase.database().ref('rsvps').set({
+    username: "naaz",
+    email: "@gmail.com"
+  });
+}
+</script>
