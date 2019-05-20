@@ -34,10 +34,32 @@
   .large-image{
       width:80%;
   }
-/* On screens that are 992px or more, set the background color to blue */
+/* On screens that are 992px or more */
 
   @media screen and (min-width: 992px) {
     .large-image{
         width:50%;
     }
   }
+
+  .small-image{width: 40%}
+
+  @media screen and (min-width: 992px) {
+    .small-image{
+        width:25%;
+    }
+  }
+
+  .map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
