@@ -48,13 +48,13 @@
         <form id="form" class="col s12">
             <div class="input-field col s12">
                 <input id="name" type="text" class="validate" required>
-                <label for="name">Full Name</label>
+                <label for="name">Full Name *</label>
             </div>
             <div class="row"></div>
 
             <div class="input-field col s12">
                 <input id="email" type="email" class="validate" required>
-                <label for="email">Email</label>
+                <label for="email">Email *</label>
             </div>
 
 
@@ -75,7 +75,7 @@
             <div class="row">
 
                 <div class="input-field col s12">
-                    <input id="dietary" type="text" class="validate" required>
+                    <input id="dietary" type="text" class="validate">
                     <label for="dietary">Dietary requirements</label>
                 </div>
             </div>
@@ -118,7 +118,7 @@
             var dietary = document.getElementById('dietary').value
             var attending = document.querySelector('input[name="attending"]:checked').value;
 
-            if (!name || !email || !dietary) {
+            if (!name || !email) {
                 M.toast({ html: 'Please fill in all fields' })
             } else {
                 console.log('submitting');
